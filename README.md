@@ -1,3 +1,8 @@
+OSLOMET BRUKER NAVN : bakir1424
+GITHUB BRUKER NAVN : BaharKirac
+GITHUB REPO URL : https://github.com/BaharKirac/obligRepo.git
+FULLT NAVN : Bahar Kirac
+
 Cinema Ticket Booking
 This project provides a simple web application for booking cinema tickets.
 It features an HTML page for user interaction and a JavaScript file for handling the business logic.
