@@ -1,10 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestilling av kinobilletter</title>
 </head>
 <body>
-$END$
+<!-- Skjema Start -->
+<form id="billettForm" style="border:2px solid blue; padding: 10px; margin: 30px; width: 400px;">
+    <h1>Bestilling av kinobilletter</h1>
+
+    <!-- Filmutvalg -->
+    <label for="filmNames"
+           style="display: inline-block; width: 100px;  margin-right: 10px;">Velg film:</label>
+    <select name="filmNames" id="filmNames" style="width: 170px;">
+        <option value="" disabled selected>Velg film her </option>
+        <option value="Titanic">Titanic</option>
+        <option value="Luca">Luca</option>
+        <option value="The Beekeeper">The Beekeeper</option>
+        <option value="Wonka">Wonka</option>
+    </select>
+    <span id="filmAdv" class="validation-error" style="color: red;"></span>
+    <br /><br/>
+    <!-- Antall input -->
+    <label for="antall"
+           style="display: inline-block; width: 100px; margin-right: 10px;">Antall</label>
+
+    <input type="number" id="antall" name="antall" min="1"
+           style=" width:40px; "/>
+    <span id="antallAdv" class="validation-error" style="color: red;"></span>
+
+    <br />
+    <br />
+
+    <!-- Fornavn input -->
+
+    <label for="fornavn" style="display: inline-block; width: 100px;  margin-right: 10px;">Fornavn:</label>
+    <input id="fornavn" name="fornavn"  />
+
+    <span id="fornavnAdv" class="validation-error" style="color: red;"></span>
+
+    <br />
+    <br />
+
+    <!-- Etternavn input -->
+
+    <label for="etternavn" style="display: inline-block; width: 100px; margin-right: 10px;">Etternavn:</label>
+    <input id="etternavn" name="etternavn" />
+
+    <span id="etternavnAdv" class="validation-error" style="color: red;"></span>
+
+    <br />
+    <br />
+
+    <!-- Telefonnr input -->
+    <label for="telefonnr"
+           style="display: inline-block; width: 100px; margin-right: 10px;">Telefonnr</label>
+    <input id="telefonnr" name="telefonnr"/>
+    <span id="telAdv" class="validation-error" style="color: red;"></span>
+
+    <br />
+    <br />
+
+    <!-- Epost input -->
+    <label for="epost"
+           style="display: inline-block; width: 100px;  margin-right: 10px;">Epost</label>
+    <input id="epost" name="epost" type="email"/>
+    <span id="epostAdv" class="validation-error" style="color: red;"></span>
+
+    <br />
+    <br />
+
+    <!-- Kjøp billett knappen -->
+    <input
+            type="button"
+            id="purchaseBillet"
+            onclick="addBillett()"
+            value="Kjøp billett"
+    /><br />
+    <br />
+
+    <!-- Alle billetter tittel -->
+    <h3>Alle billetter</h3>
+    <div id="alleBilletter"></div>
+
+    <!-- Slett alle billettene knappen -->
+    <input
+            type="button"
+            onclick="slettAlleBilletter()"
+            id="slettBillet"
+            value="Slett alle billettene"
+    /><br />
+</form>
 </body>
+<script src="script.js"></script>
 </html>
