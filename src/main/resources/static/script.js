@@ -50,7 +50,7 @@ function checkInput() {
     let fornavn = document.getElementById("fornavn").value;
     let fornavnAdv = document.getElementById("fornavnAdv");
     if (!/^[a-zA-ZæøåÆØÅ\s]+$/.test(fornavn) || fornavn.length < 2) {
-        fornavnAdv.innerText = "Må skrive noe inn i fornavnet";
+        fornavnAdv.innerText = "Dette feltet kan ikke stå tomt.";
         fornavnAdv.style.display = "inline-block";
         isValid = false;
     } else {
@@ -61,7 +61,7 @@ function checkInput() {
     let etternavn = document.getElementById("etternavn").value;
     let etternavnAdv = document.getElementById("etternavnAdv");
     if (!/^[a-zA-ZæøåÆØÅ\s]+$/.test(etternavn) || etternavn.length < 2) {
-        etternavnAdv.innerText = "Må skrive noe inn i etternavnet";
+        etternavnAdv.innerText = "Dette feltet kan ikke stå tomt.";
         etternavnAdv.style.display = "inline-block";
         isValid = false;
     } else {
